@@ -1,6 +1,6 @@
 ---
 name: diagram-architect
-description: 架构图与流程图生成：使用 Mermaid/PlantUML 描述系统架构、数据流、时序、ER 关系
+description: 架构图与流程图：Mermaid/PlantUML 描述系统架构、数据流、时序、ER 关系
 source:
   type: original
   repo: skills-repo/docs-writer

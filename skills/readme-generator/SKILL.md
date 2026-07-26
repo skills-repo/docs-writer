@@ -1,6 +1,6 @@
 ---
 name: readme-generator
-description: README 自动生成：从代码库分析项目结构，生成专业的 README.md（介绍、安装、用法、API、贡献）
+description: README 自动生成：分析项目结构，生成专业 README（介绍/安装/用法/API/贡献）
 source:
   type: original
   repo: skills-repo/docs-writer

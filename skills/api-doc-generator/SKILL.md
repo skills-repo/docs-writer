@@ -1,6 +1,6 @@
 ---
 name: api-doc-generator
-description: API 文档生成：从代码中提取端点，生成 OpenAPI/Swagger 规范文档，含请求/响应示例
+description: API 文档生成：从代码提取端点，生成 OpenAPI/Swagger 规范，含请求/响应示例
 source:
   type: original
   repo: skills-repo/docs-writer

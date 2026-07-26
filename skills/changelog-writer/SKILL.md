@@ -1,6 +1,6 @@
 ---
 name: changelog-writer
-description: Changelog 自动化：从 Git commit 历史生成结构化变更日志，遵循 Keep a Changelog 规范
+description: Changelog 自动化：从 Git commit 历史生成结构化变更日志，Keep a Changelog 规范
 source:
   type: original
   repo: skills-repo/docs-writer
