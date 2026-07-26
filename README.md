@@ -18,10 +18,10 @@
 
 | 环节 | 技能 | 描述 | 来源 |
 |------|------|------|------|
-| 📘 项目文档 | `readme-generator` | README 生成：徽章、安装、API 概览、贡献指南，专业模板 | [衍生](https://skills.sh/patricio0312rev/skills/readme-generator) |
+| 📘 项目文档 | `readme-generator` | README 生成：项目分析、ARCHITECTURE、API 文档、数据库 Schema | [衍生](https://skills.sh/jezweb/claude-skills/project-docs) |
 | 📝 变更日志 | `changelog-writer` | Changelog 与 Release Notes：Keep a Changelog 格式、语义化版本 | [衍生](https://skills.sh/patricio0312rev/skills/changelog-writer) |
-| 🔌 API 文档 | `api-doc-generator` | API 文档生成：OpenAPI/Swagger、端点说明、请求示例 | [衍生](https://skills.sh/levnikolaevich/claude-code-skills/ln-775-api-docs-generator) |
-| 🗺️ 图表架构 | `diagram-architect` | Mermaid 图表：流程图、时序图、ERD、架构图，Markdown 嵌入 | [衍生](https://skills.sh/patricio0312rev/skills/mermaid-diagram-generator) |
+| 🔌 API 文档 | `api-doc-generator` | API 文档生成：OpenAPI/Swagger、端点说明、请求示例、鉴权文档 | [衍生](https://skills.sh/sickn33/antigravity-awesome-skills/api-documentation-generator) |
+| 🗺️ 图表架构 | `diagram-architect` | PlantUML/Mermaid 图表：类图、时序图、架构图、部署图 | [衍生](https://skills.sh/markdown-viewer/skills/uml) |
 
 ## 快速开始
 

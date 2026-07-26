@@ -1,13 +1,13 @@
 ---
 name: diagram-architect
-description: 图表架构设计：Mermaid 流程图、时序图、ERD、架构图，支持 Markdown 嵌入
+description: 图表架构设计：PlantUML/Mermaid 流程图、时序图、ERD、架构图、部署图
 source:
   type: derived
   repo: skills-repo/docs-writer
   path: skills/diagram-architect/SKILL.md
   version: 1.0.0
   updated: 2026-07-26
-  url: https://skills.sh/patricio0312rev/skills/mermaid-diagram-generator
+  url: https://skills.sh/markdown-viewer/skills/uml
 metadata:
   category: 文档
   platform: Web
@@ -16,31 +16,36 @@ metadata:
 
 # 图表架构师
 
-> Mermaid 图表生成：流程图、时序图、ERD、架构图，Markdown 原生支持。
+> 图表生成：支持 PlantUML 文本语法和 Mermaid 标记，覆盖类图、时序图、活动图、状态机、组件图、部署图等。
 
 ## 能力
 
-- **流程图**：决策树、业务流程、状态机
-- **时序图**：API 调用时序、消息传递、交互流程
-- **ERD 图**：实体关系、表结构、外键关联
-- **架构图**：系统架构、微服务拓扑、网络拓扑
-- **子图与分组**：嵌套子图、Colored 分组、自定义样式
+- **PlantUML 图表**：类图、时序图、活动图（含泳道）、状态机图、组件图、用例图、部署图、包图、对象图
+- **Mermaid 图表**：流程图、时序图、ERD、架构图、甘特图
+- **mxgraph 图标**：支持 9500+ AWS/Azure/Cisco/K8s 等 stencil 图标
+- **样式定制**：skinparam 全局样式、元素级颜色、方向控制
+- **Markdown 嵌入**：所有图表均可嵌入 Markdown 文档
 
 ## 使用方式
 
 ```
 /diagram-architect 为这个登录流程画一个时序图
 /diagram-architect 生成数据库 ER 图
-/diagram-architect 用流程图描述这个审核流程
+/diagram-architect 用泳道图描述这个跨团队审批流程
+/diagram-architect 画一个 AWS 架构部署图
 ```
 
-## 工作流
+## 图表类型速查
 
-1. 理解业务逻辑或代码结构
-2. 选择合适的图表类型（流程图/时序图/ERD/架构图）
-3. 构建节点、连接、标签
-4. 应用样式（颜色、形状、方向）
-5. 输出 Mermaid 语法，可直接嵌入 Markdown
+| 类型 | 用途 | 语法 |
+|------|------|------|
+| 类图 | 类结构与关系 | `class`, `interface`, `<\|--` |
+| 时序图 | 消息交互时序 | `participant`, `->`, `-->` |
+| 活动图 | 工作流和流程 | `start`, `:action;`, `if/else` |
+| 泳道图 | 多角色活动 | `\|Lane\|`, `:action;` |
+| 状态机 | 对象生命周期 | `state`, `[*] -->` |
+| 组件图 | 系统组件组织 | `component`, `[name]` |
+| 部署图 | 物理部署架构 | `node`, `database` |
 
 ## 适用场景
 
@@ -48,9 +53,10 @@ metadata:
 - API 对接的时序设计
 - 数据库设计文档
 - 系统架构文档
+- 云架构部署图
 
 ## 限制
 
-- 仅输出 Mermaid 语法，不生成图片
 - 复杂图表需手动美化布局
-- 不涉及非 Mermaid 图表格式（PlantUML/Graphviz）
+- 非 PlantUML/Mermaid 格式（Graphviz/D2）需手动转换
+- 部分高级 PlantUML 特性需要特定渲染器支持
