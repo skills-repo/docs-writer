@@ -1,67 +1,56 @@
 ---
 name: diagram-architect
-description: 架构图与流程图：Mermaid/PlantUML 描述系统架构、数据流、时序、ER 关系
+description: 图表架构设计：Mermaid 流程图、时序图、ERD、架构图，支持 Markdown 嵌入
 source:
-  type: original
+  type: derived
   repo: skills-repo/docs-writer
   path: skills/diagram-architect/SKILL.md
   version: 1.0.0
   updated: 2026-07-26
+  url: https://skills.sh/patricio0312rev/skills/mermaid-diagram-generator
 metadata:
   category: 文档
-  platform: 通用
+  platform: Web
   difficulty: 入门
 ---
 
 # 图表架构师
 
-> 用代码画图。描述你的系统结构，输出 Mermaid/PlantUML 图表。一图胜千言。
+> Mermaid 图表生成：流程图、时序图、ERD、架构图，Markdown 原生支持。
 
 ## 能力
 
-- **架构图**：系统组件、服务间调用关系、部署拓扑
-- **流程图**：业务流程、审批流、状态机
-- **时序图**：API 调用链、微服务交互、消息传递
-- **ER 图**：数据库表关系、实体属性
-- **多格式输出**：Mermaid（Markdown 内嵌）、PlantUML、ASCII 图
+- **流程图**：决策树、业务流程、状态机
+- **时序图**：API 调用时序、消息传递、交互流程
+- **ERD 图**：实体关系、表结构、外键关联
+- **架构图**：系统架构、微服务拓扑、网络拓扑
+- **子图与分组**：嵌套子图、Colored 分组、自定义样式
 
 ## 使用方式
 
 ```
-/diagram-architect 画出这个微服务系统的架构图
-/diagram-architect 生成用户登录流程的时序图
-/diagram-architect 根据这个 schema 画 ER 图
+/diagram-architect 为这个登录流程画一个时序图
+/diagram-architect 生成数据库 ER 图
+/diagram-architect 用流程图描述这个审核流程
 ```
-
-## 图表类型速查
-
-| 需求 | 图表类型 | 推荐工具 |
-|------|---------|---------|
-| 系统组件关系 | 架构图 (C4) | Mermaid |
-| 业务步骤流转 | 流程图 | Mermaid |
-| API 调用顺序 | 时序图 | Mermaid |
-| 状态变化 | 状态图 | Mermaid |
-| 数据表关系 | ER 图 | Mermaid/PlantUML |
-| 类继承关系 | 类图 | Mermaid |
-| 部署拓扑 | 部署图 | PlantUML |
 
 ## 工作流
 
-1. 描述系统结构或业务流程
-2. AI 选择合适的图表类型
-3. 生成 Mermaid/PlantUML 代码
-4. 渲染预览（支持 GitHub/GitLab 原生渲染）
-5. 调整布局和标注
+1. 理解业务逻辑或代码结构
+2. 选择合适的图表类型（流程图/时序图/ERD/架构图）
+3. 构建节点、连接、标签
+4. 应用样式（颜色、形状、方向）
+5. 输出 Mermaid 语法，可直接嵌入 Markdown
 
 ## 适用场景
 
-- 系统设计文档需要架构图
-- API 文档需要调用时序图
-- 数据库设计需要 ER 图
-- 流程文档需要可视化
+- 技术文档中的流程图
+- API 对接的时序设计
+- 数据库设计文档
+- 系统架构文档
 
 ## 限制
 
-- 不生成像素级 UI 设计稿
-- 复杂系统可能需要多张图而非一张大图
-- GitHub 对 Mermaid 的渲染有少数语法限制
+- 仅输出 Mermaid 语法，不生成图片
+- 复杂图表需手动美化布局
+- 不涉及非 Mermaid 图表格式（PlantUML/Graphviz）

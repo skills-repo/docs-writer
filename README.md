@@ -1,22 +1,45 @@
-# Docs Writer — 文档编写技能库
+# 文档编写技能库
 
-> 面向个人开发者和小团队的文档写作技能集，覆盖 README、Changelog、API 文档、架构图的自动生成。
+> AI Agent Skills for Technical Writing —— 覆盖 README、Changelog、API 文档、架构图自动生成
 
-## 技能列表
+## 定位
 
-| 技能 | 描述 | 难度 | 来源 |
+为开发者提供一套可安装的 AI Agent 文档技能，让 Claude Code 自动生成专业级技术文档。
+
+## 核心理念
+
+> 好文档是工程的另一半。用 AI 降低文档编写成本，让每个项目都有清晰、专业的文档。
+
+- **自动化生成**——从代码中提取信息，自动生成结构化文档
+- **标准化格式**——遵循 Keep a Changelog、OpenAPI 等行业标准
+- **可视化优先**——用图表代替纯文本，降低理解成本
+
+## 技能清单
+
+| 环节 | 技能 | 描述 | 来源 |
 |------|------|------|------|
-| [readme-generator](skills/readme-generator/SKILL.md) | README 自动生成：项目介绍、安装指南、API 速览、贡献指南 | 入门 | 原创 |
-| [changelog-writer](skills/changelog-writer/SKILL.md) | Changelog 自动化：从 commit 历史生成结构化变更日志 | 入门 | 原创 |
-| [api-doc-generator](skills/api-doc-generator/SKILL.md) | API 文档生成：OpenAPI/Swagger、端点说明、请求示例 | 进阶 | 原创 |
-| [diagram-architect](skills/diagram-architect/SKILL.md) | 图表生成：架构图、流程图、时序图、ER 图（Mermaid/PlantUML） | 入门 | 原创 |
+| 📘 项目文档 | `readme-generator` | README 生成：徽章、安装、API 概览、贡献指南，专业模板 | [衍生](https://skills.sh/patricio0312rev/skills/readme-generator) |
+| 📝 变更日志 | `changelog-writer` | Changelog 与 Release Notes：Keep a Changelog 格式、语义化版本 | [衍生](https://skills.sh/patricio0312rev/skills/changelog-writer) |
+| 🔌 API 文档 | `api-doc-generator` | API 文档生成：OpenAPI/Swagger、端点说明、请求示例 | [衍生](https://skills.sh/levnikolaevich/claude-code-skills/ln-775-api-docs-generator) |
+| 🗺️ 图表架构 | `diagram-architect` | Mermaid 图表：流程图、时序图、ERD、架构图，Markdown 嵌入 | [衍生](https://skills.sh/patricio0312rev/skills/mermaid-diagram-generator) |
 
-## 安装
+## 快速开始
 
 ```bash
-git clone https://github.com/skills-repo/docs-writer.git
+npx skills add skills-repo/docs-writer@readme-generator -g -y
+npx skills add skills-repo/docs-writer@changelog-writer -g -y
+npx skills add skills-repo/docs-writer@api-doc-generator -g -y
+npx skills add skills-repo/docs-writer@diagram-architect -g -y
 ```
 
-## 贡献
+## 推荐工作流
 
-欢迎提交 Issue 或 PR 补充新的文档技能。请参考 [CONTRIBUTING.md](../skills-repo-admin/rules/skill-format.md) 的格式规范。
+```
+项目分析 → README 生成 → API 文档 → 架构图 → Changelog 记录
+readme-    api-doc-      diagram-   changelog-
+generator  generator     architect  writer
+```
+
+## 许可
+
+MIT

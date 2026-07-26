@@ -1,73 +1,56 @@
 ---
 name: changelog-writer
-description: Changelog 自动化：从 Git commit 历史生成结构化变更日志，Keep a Changelog 规范
+description: Changelog 与 Release Notes 生成：基于 Commit 历史、Keep a Changelog 格式、语义化版本
 source:
-  type: original
+  type: derived
   repo: skills-repo/docs-writer
   path: skills/changelog-writer/SKILL.md
   version: 1.0.0
   updated: 2026-07-26
+  url: https://skills.sh/patricio0312rev/skills/changelog-writer
 metadata:
   category: 文档
-  platform: GitHub
+  platform: 通用
   difficulty: 入门
 ---
 
-# Changelog 编写器
+# Changelog 与 Release Notes 生成器
 
-> 从 Git commit 历史自动生成结构化的 CHANGELOG.md。不是把所有 commit 复制过来，而是分类、聚合、用人话写。
+> 从 Git 提交历史自动生成结构化的 Changelog 和 Release Notes，遵循 Keep a Changelog 标准。
 
 ## 能力
 
-- **Commit 分析**：读取 git log，按 Conventional Commits 分类（feat/fix/docs/refactor）
-- **变更聚合**：合并同类变更，生成用户可读的条目
-- **Keep a Changelog**：遵循 keepachangelog.com 1.0.0 规范
-- **版本推断**：根据 commit 类型自动建议语义化版本号
-- **已有内容合并**：更新已有 CHANGELOG 时保留手动编写的内容
+- **Commit 解析**：识别 Conventional Commits 格式（feat/fix/docs/refactor）
+- **变更分类**：Added/Changed/Fixed/Deprecated/Removed/Security
+- **Breaking Change 识别**：标记不兼容变更
+- **版本建议**：基于变更内容推荐语义化版本号
+- **Release Notes**：生成用户友好的发布摘要
 
 ## 使用方式
 
 ```
-/changelog-writer                  # 从上次 tag 到现在的变更生成 CHANGELOG
-/changelog-writer v1.0.0..HEAD     # 指定范围
-/changelog-writer --release 2.0.0  # 为新版本生成 release entry
-```
-
-## 输出格式
-
-```markdown
-# Changelog
-
-## [1.2.0] - 2026-07-26
-
-### Added
-- 用户头像上传功能
-- 暗色模式支持
-
-### Fixed
-- 修复登录页面密码框不显示的问题
-
-### Changed
-- API 响应格式统一为 JSON:API
+/changelog-writer 为最近 50 个提交生成 Changelog
+/changelog-writer 为 v1.0.0 到 v1.5.0 生成 Release Notes
+/changelog-writer 审查这个 Changelog 的格式
 ```
 
 ## 工作流
 
-1. 读取 `git log --oneline` 自上次 tag 的变更
-2. 按 Conventional Commits 分类（feat→Added, fix→Fixed, refactor→Changed, docs→Documentation）
-3. 合并同类型、同模块的变更
-4. 生成或更新 CHANGELOG.md
+1. 解析 Git 提交历史（自上次发布以来）
+2. 按类型分类变更（feat→Added, fix→Fixed, BREAKING→Breaking）
+3. 识别关键变更和亮点
+4. 按 Keep a Changelog 格式组织
 5. 建议语义化版本号
 
 ## 适用场景
 
-- 项目发布前整理变更日志
-- 自动化 release workflow 中的 changelog 生成
-- 团队需要标准化 changelog 格式
-- 从混乱的 commit 历史中提取用户可读的发布说明
+- 开源项目版本发布
+- 内部项目变更追踪
+- CI/CD 自动发布流程
+- 用户沟通的 Release Notes
 
 ## 限制
 
-- 依赖 commit message 遵循规范（无规范时分类准确度下降）
-- 重大变更（breaking changes）需要人工标注
-- 不处理 monorepo 多包 changelog
+- 依赖 Conventional Commits 格式，非标准提交需手动分类
+- 不涉及自动化发布流程（npm publish/git tag）
+- 不涉及多语言 Release Notes

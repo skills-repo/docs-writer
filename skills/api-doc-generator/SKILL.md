@@ -1,65 +1,56 @@
 ---
 name: api-doc-generator
-description: API 文档生成：从代码提取端点，生成 OpenAPI/Swagger 规范，含请求/响应示例
+description: API 文档生成：OpenAPI/Swagger 规范，端点说明，请求示例，鉴权文档
 source:
-  type: original
+  type: derived
   repo: skills-repo/docs-writer
   path: skills/api-doc-generator/SKILL.md
   version: 1.0.0
   updated: 2026-07-26
+  url: https://skills.sh/levnikolaevich/claude-code-skills/ln-775-api-docs-generator
 metadata:
   category: 文档
-  platform: 通用
+  platform: Web
   difficulty: 进阶
 ---
 
 # API 文档生成器
 
-> 从代码中的路由定义自动生成 API 文档。支持 REST 和 GraphQL，输出 OpenAPI 3.0 规范。
+> 自动生成 API 参考文档：OpenAPI/Swagger 规范、端点说明、请求/响应示例、鉴权文档。
 
 ## 能力
 
-- **路由提取**：从 Express/FastAPI/Next.js/Go 等框架中提取路由定义
-- **OpenAPI 生成**：自动生成 OpenAPI 3.0 spec（paths、parameters、responses、schemas）
-- **请求/响应示例**：根据类型定义推断请求体和响应体示例
-- **错误码文档**：提取错误处理逻辑，生成错误码表
-- **多格式输出**：YAML/JSON spec 文件、HTML 文档页、Markdown API 参考
+- **OpenAPI 规范**：生成符合 OpenAPI 3.0 规范的 API 描述文件
+- **端点文档**：路径、方法、参数、请求体、响应体的完整文档
+- **鉴权文档**：API Key、Bearer Token、OAuth2 等方式的说明
+- **示例生成**：请求/响应示例、错误码说明
+- **格式输出**：Swagger UI、Redoc、Markdown 等多种输出
 
 ## 使用方式
 
 ```
-/api-doc                    # 为当前项目的 API 路由生成文档
-/api-doc src/routes/        # 指定路由目录
-/api-doc --format markdown  # 输出 Markdown 格式
+/api-doc-generator 为这个 Express 路由生成 API 文档
+/api-doc-generator 从代码注释生成 OpenAPI 规范
+/api-doc-generator 更新这个 API 的请求示例
 ```
-
-## 支持的框架
-
-| 框架 | 路由识别方式 |
-|------|-------------|
-| Express.js | `app.get/post/put/delete(...)` |
-| FastAPI | `@app.get/post(...)` + type hints |
-| Next.js | `route.ts` 文件 |
-| Go (net/http) | `http.HandleFunc(...)` |
-| Flask | `@app.route(...)` |
 
 ## 工作流
 
-1. 扫描路由文件，提取 HTTP 方法和路径
-2. 从类型定义/注释中提取参数和返回值类型
-3. 生成 OpenAPI paths 和 components/schemas
-4. 补充请求/响应示例
-5. 输出文档文件
+1. 扫描代码中的 API 路由定义
+2. 提取端点、参数、请求/响应类型
+3. 识别鉴权方式和错误处理
+4. 生成 OpenAPI/Swagger 规范文件
+5. 可选：渲染为可交互的 API 文档
 
 ## 适用场景
 
-- 新 API 上线前补齐文档
-- 已有 API 无文档需要生成初始版本
-- 前后端协作需要统一的 API spec
-- 向第三方暴露 API 时提供参考文档
+- REST API 文档化
+- OpenAPI 规范补全
+- API 文档从代码注释自动生成
+- 第三方 API 对接文档
 
 ## 限制
 
-- 生成的文档准确度依赖代码中类型定义的完整性
-- 非标准路由写法可能无法正确识别
-- 不处理 WebSocket/gRPC 等非 REST 协议
+- 主要覆盖 REST API，不涉及 GraphQL schema 文档
+- 不涉及 SDK 文档生成
+- 复杂鉴权流程需手动补充

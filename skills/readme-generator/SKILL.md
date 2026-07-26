@@ -1,71 +1,56 @@
 ---
 name: readme-generator
-description: README 自动生成：分析项目结构，生成专业 README（介绍/安装/用法/API/贡献）
+description: README 文档生成：项目徽章、安装说明、API 概览、贡献指南，专业级模板
 source:
-  type: original
+  type: derived
   repo: skills-repo/docs-writer
   path: skills/readme-generator/SKILL.md
   version: 1.0.0
   updated: 2026-07-26
+  url: https://skills.sh/patricio0312rev/skills/readme-generator
 metadata:
   category: 文档
-  platform: GitHub
+  platform: 通用
   difficulty: 入门
 ---
 
 # README 生成器
 
-> 扫描代码库，自动生成结构清晰、内容完整的 README.md。一个好的 README 让项目在第一眼就被理解。
+> 自动生成专业 README 文档：项目介绍、徽章、安装说明、API 概览、贡献指南。
 
 ## 能力
 
-- **项目结构分析**：自动识别语言、框架、入口文件、构建系统
-- **README 模板**：多种风格模板（简约/minimal、完整/full、产品/product）
-- **安装指南**：自动生成依赖安装、环境配置步骤
-- **API 速览**：从代码中提取主要 API 端点或公开函数
-- **徽章生成**：自动建议合适的 Shields.io 徽章
+- **项目分析**：识别项目类型和技术栈，生成对应的文档结构
+- **徽章生成**：版本、构建状态、覆盖率、许可等自动生成
+- **安装指南**：前置条件、包管理器、从源码构建
+- **使用说明**：基本用法、API 文档、配置选项
+- **贡献指南**：开发流程、代码规范、PR 模板
 
 ## 使用方式
 
 ```
-/readme-generator                # 为当前项目生成 README
-/readme-generator --style full   # 使用完整模板
-/readme-generator --update       # 更新已有 README（保留手动内容）
-```
-
-## README 标准结构
-
-```markdown
-# 项目名
-> 一句话描述
-
-## 特性
-## 快速开始
-## 安装
-## 用法
-## API
-## 配置
-## 贡献
-## 许可
+/readme-generator 为这个项目生成 README
+/readme-generator 更新 README 中的 API 文档部分
+/readme-generator 为这个 TypeScript 库生成文档
 ```
 
 ## 工作流
 
-1. 扫描项目目录结构和关键文件
-2. 识别语言/框架/构建工具
-3. 提取公开 API 或函数签名
-4. 生成 README，填写每个 section
-5. 检查已有 README，合并手动内容
+1. 分析项目结构和 package.json/配置文件
+2. 识别项目类型和技术栈
+3. 生成对应的 README 模板
+4. 填入项目具体信息
+5. 输出完整文档
 
 ## 适用场景
 
-- 新项目初始化时需要第一个 README
-- 已有 README 过时或不完整需要重写
-- 开源项目发布前完善文档
-- 团队需要统一的 README 风格
+- 新项目文档初始化
+- 现有项目文档更新
+- 开源项目文档完善
+- 多语言项目文档
 
 ## 限制
 
-- 生成的 README 需要人工审查和补充细节
-- 不处理非代码项目（纯文档仓库等）的 README
-- 语言检测基于常见模式，特殊项目可能需手动指定
+- 模板化输出，特殊项目需手动调整
+- 不涉及 API 参考文档的详细生成
+- 不涉及多语言翻译
