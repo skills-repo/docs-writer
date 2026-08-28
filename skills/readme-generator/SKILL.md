@@ -58,3 +58,10 @@ metadata:
 - 模板化输出，特殊项目需手动调整
 - 仅生成文档内容，不涉及发布
 - 不会自动推断未写明的设计意图
+
+## 相关参考（Playbook）
+
+- `references/doc-lifecycle-and-pipeline.md` — 文档入口与生成顺序（第 1 步）、受众分层主文档写法
+- `references/diagram-selection-guide.md` — 第 15 节：本技能产出的架构图占位如何按真实技术栈补全
+- 产出后核查：`scripts/check_code_blocks.py`、`scripts/check_md_links.py`（文档门禁，防死链/未标注）
+- 模板范本：`assets/readme-template.md`

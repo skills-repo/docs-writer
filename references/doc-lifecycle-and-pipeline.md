@@ -172,3 +172,21 @@ jobs:
 - 死链/未标注代码块在 PR 阶段被拦截，不进 main
 
 达到这四条，文档质量即达标；否则回到第 4-6 节补对应环节。
+
+## 相关子技能与层次边界
+
+本文是 docs-writer 的**编排层**方法论：子技能各自负责「怎么生成单类文档」，本文负责「一个真实项目该按什么顺序产出哪些文档、什么自动/什么手写、跨文档如何保持一致」。
+
+- 直接服务子技能：
+  - `skills/readme-generator/`（文档入口，生成顺序第 1 步；受众分层主文档）
+  - `skills/changelog-writer/`（发布环节，生成顺序第 5 步；版本号一致性）
+  - `skills/api-doc-generator/`（生成顺序第 3 步；与实现一致性）
+  - `skills/diagram-architect/`（生成顺序第 4 步；与代码目录一致性）
+- 兄弟参考（同层增量方法论，按需交叉阅读）：
+  - `references/api-doc-authoring-playbook.md`（API 文档撰写质量）
+  - `references/diagram-selection-guide.md`（图表选型与绘制）
+- 配套确定性资产（根 SKILL.md 内置脚本/模板）：
+  - `scripts/check_md_links.py` — 跨文档死链/残留核查（第 5/9 节）
+  - `scripts/check_code_blocks.py` — 代码块语言标注核查（第 5/9 节）
+  - `assets/markdown-lint-rules.json` — 上述脚本的规则唯一事实来源
+  - `assets/readme-template.md` — README 标准模板（锚点/代码块合规范本）

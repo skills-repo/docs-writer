@@ -60,3 +60,10 @@ metadata:
 - 复杂图表需手动美化布局
 - 非 PlantUML/Mermaid 格式（Graphviz/D2）需手动转换
 - 部分高级 PlantUML 特性需要特定渲染器支持
+
+## 相关参考（Playbook）
+
+- `references/diagram-selection-guide.md` — 核心 playbook：选型矩阵、画清楚原则、渲染坑（PlantUML 中文乱码/Mermaid 语法）
+- `references/doc-lifecycle-and-pipeline.md` — 架构图在生成顺序第 4 步、与代码目录一致性、受众分层
+- 强制核查：`scripts/check_code_blocks.py`（代码块必须标 `mermaid`/`puml`，否则渲染失败）
+- 模板范本：`assets/readme-template.md`（图只放架构类，避免堆截图）

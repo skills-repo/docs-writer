@@ -188,3 +188,17 @@ npx redoc-cli serve openapi.yaml
 交付建议：把 OpenAPI 推到文档站（如 Redocly / Stoplight），让调用方能「试一试」。纯静态 `docs/api.md` 适合进 Git 但缺乏交互；两者并存最佳——spec 为权威，Markdown 为入门。
 
 > 一致性提醒：若同时维护 `openapi.yaml` 与 `docs/api.md`，任一处改了端点，另一处要同步，否则出现「文档说支持、实际不支持」。把生成接进 CI 是唯一可持续解法。
+
+## 相关子技能与层次边界
+
+本文补 `skills/api-doc-generator/` **装不下**的判断层：`api-doc-generator` 负责「从代码提取端点生成 OpenAPI」，本文负责「生成的 spec 怎么写才算好文档、REST vs GraphQL 策略、版本演进不破坏调用方、示例质量怎么保证」。
+
+- 直接服务子技能：`skills/api-doc-generator/`
+- 兄弟参考：
+  - `references/doc-lifecycle-and-pipeline.md`（API 文档在生成顺序中的位置与一致性）
+  - `references/diagram-selection-guide.md`（API 文档里的架构图/时序图选区）
+- 配套确定性资产：
+  - `scripts/check_md_links.py` — 文档内链接存活核查（第 6/10 节，仅覆盖 `.md` 载体）
+  - `scripts/check_code_blocks.py` — 代码块语言标注核查（第 6/10 节）
+  - `assets/markdown-lint-rules.json` — 脚本规则源
+- 边界提示：纯 YAML spec（`.yaml`）结构校验请用 spectral 等专用工具，本仓库脚本只覆盖 Markdown 载体（如 `docs/api.md` 内示例），二者职责互补。
