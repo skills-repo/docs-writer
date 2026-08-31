@@ -60,7 +60,7 @@ python3 scripts/check_code_blocks.py README.md docs/    # 查代码块标注
 
 ## 推荐工作流
 
-```
+```text
 项目分析 → README 生成 → API 文档 → 架构图 → Changelog 记录
 readme-    api-doc-      diagram-   changelog-
 generator  generator     architect  writer

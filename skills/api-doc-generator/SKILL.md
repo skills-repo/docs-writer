@@ -29,7 +29,7 @@ metadata:
 
 ## 使用方式
 
-```
+```text
 /api-doc-generator 为这个 Express 路由生成 API 文档
 /api-doc-generator 从代码注释生成 OpenAPI 规范
 /api-doc-generator 更新这个 API 的请求示例

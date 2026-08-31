@@ -28,7 +28,7 @@ metadata:
 
 ## 使用方式
 
-```
+```text
 /changelog-writer 为最近 50 个提交生成 Changelog
 /changelog-writer 为 v1.0.0 到 v1.5.0 生成 Release Notes
 /changelog-writer 审查这个 Changelog 的格式

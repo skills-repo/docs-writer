@@ -5,7 +5,7 @@
 
 ## 1. 决策树：这个项目需要哪些文档？
 
-```
+```text
 新项目 / 文档缺失
 ├─ 是否对外提供代码或库？
 │   ├─ 是 ↓
@@ -32,7 +32,7 @@
 
 ## 3. 生成顺序（避免返工）
 
-```
+```text
 1. README 骨架（项目定位、安装、使用）
 2. 代码结构分析 → 识别接口与模块
 3. API 文档（若有接口）
@@ -65,7 +65,7 @@
 - [ ] 所有文档链接存活（用 `scripts/check_md_links.py` 自动核查）
 
 ```bash
-# 提交前批量核查仓库内所有 .md 的死链与残留 TODO
+# 提交前批量核查仓库内所有 .md 的死链与残留待办标记
 python3 scripts/check_md_links.py docs/ README.md
 # 核查代码块是否已标注语言
 python3 scripts/check_code_blocks.py docs/ README.md
@@ -82,7 +82,7 @@ python3 scripts/check_code_blocks.py docs/ README.md
 
 ## 7. 发布前文档速查
 
-```
+```text
 README 存在且入口清晰？
 ├─ 有接口 → API 文档与实现一致？
 ├─ 有模块 → 架构图与目录一致？
@@ -92,18 +92,18 @@ README 存在且入口清晰？
 
 ## 8. 实战：为一个 Express 服务产出文档集
 
-```
+```bash
 # 1) README 骨架（readme-generator 识别为 Node 项目）
-/python3 -m skills.readme_generator .
+python3 -m skills.readme_generator .
 
 # 2) 从路由生成 OpenAPI（api-doc-generator 扫描 express 路由）
-/python3 -m skills.api_doc_generator --scan ./src/routes --out openapi.yaml
+python3 -m skills.api_doc_generator --scan ./src/routes --out openapi.yaml
 
 # 3) 架构时序图（diagram-architect，基于模块调用）
-/python3 -m skills.diagram_architect --flow login --out docs/login-seq.puml
+python3 -m skills.diagram_architect --flow login --out docs/login-seq.puml
 
 # 4) 发布时生成 Changelog（changelog-writer 从 commit）
-/python3 -m skills.changelog_writer --since v1.0.0 --out CHANGELOG.md
+python3 -m skills.changelog_writer --since v1.0.0 --out CHANGELOG.md
 
 # 5) 一致性核查
 python3 scripts/check_md_links.py README.md openapi.yaml docs/
@@ -144,7 +144,7 @@ jobs:
 - [ ] 生成顺序正确：README → 分析 → API/图 → Changelog
 - [ ] 自动产出已人工润色关键场景段落
 - [ ] 跨文档命名/版本/URL 一致
-- [ ] 死链与残留 TODO 已用脚本扫清
+- [ ] 死链与残留待办标记已用脚本扫清
 - [ ] 代码块全部标注语言
 - [ ] 复杂图表已按受众拆分
 - [ ] 发布前跑 check_md_links / check_code_blocks

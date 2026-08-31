@@ -28,7 +28,7 @@ metadata:
 
 ## 使用方式
 
-```
+```text
 /readme-generator 为这个项目生成完整文档
 /readme-generator 只生成 API 端点文档
 /readme-generator 更新数据库 Schema 文档

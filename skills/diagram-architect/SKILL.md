@@ -28,7 +28,7 @@ metadata:
 
 ## 使用方式
 
-```
+```text
 /diagram-architect 为这个登录流程画一个时序图
 /diagram-architect 生成数据库 ER 图
 /diagram-architect 用泳道图描述这个跨团队审批流程
