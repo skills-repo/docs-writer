@@ -57,6 +57,6 @@ metadata:
 
 ## 相关参考（Playbook）
 
-- `references/doc-lifecycle-and-pipeline.md` — 决策树 changelog 分支、生成顺序第 5 步、版本号跨文档一致性、典型坑 8（过滤 `chore`/`refactor` 等内部提交）
-- 一致性核查：`scripts/check_md_links.py`（链接存活，避免版本号/链接漂移）
+- [references/doc-lifecycle-and-pipeline.md](../../references/doc-lifecycle-and-pipeline.md) — 决策树 changelog 分支、生成顺序第 5 步、版本号跨文档一致性、典型坑 8（过滤 `chore`/`refactor` 等内部提交）
+- 一致性核查：[scripts/check_md_links.py](../../scripts/check_md_links.py)（链接存活，避免版本号/链接漂移）
 - 关联：`skills/productivity-master` 的 `git-workflow` 提供 Conventional Commits 源（本技能版本建议依赖之）

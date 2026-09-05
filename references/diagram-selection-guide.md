@@ -191,14 +191,14 @@ Mermaid 图可在 CI 预渲染，语法错直接失败：
 
 ## 相关子技能与层次边界
 
-本文补 `skills/diagram-architect/` **装不下**的判断层：`diagram-architect` 负责「用 PlantUML/Mermaid 语法生成图」，本文负责「什么时候该画图、PlantUML 还是 Mermaid、选哪类图、怎么画才不糊、渲染坑怎么避」。第 15 节还衔接 `readme-generator` 产出的架构图占位补全。
+本文补 [skills/diagram-architect/](../skills/diagram-architect/SKILL.md) **装不下**的判断层：`diagram-architect` 负责「用 PlantUML/Mermaid 语法生成图」，本文负责「什么时候该画图、PlantUML 还是 Mermaid、选哪类图、怎么画才不糊、渲染坑怎么避」。第 15 节还衔接 `readme-generator` 产出的架构图占位补全。
 
 - 直接服务子技能：
-  - `skills/diagram-architect/`（主消费者）
-  - `skills/readme-generator/`（第 15 节：补全其架构图占位，按真实技术栈分层）
+  - [skills/diagram-architect/](../skills/diagram-architect/SKILL.md)（主消费者）
+  - [skills/readme-generator/](../skills/readme-generator/SKILL.md)（第 15 节：补全其架构图占位，按真实技术栈分层）
 - 兄弟参考：
-  - `references/doc-lifecycle-and-pipeline.md`（架构图在生成顺序中的位置与目录一致性）
-  - `references/api-doc-authoring-playbook.md`（API 文档中的时序图/架构图选区）
+  - [references/doc-lifecycle-and-pipeline.md](doc-lifecycle-and-pipeline.md)（架构图在生成顺序中的位置与目录一致性）
+  - [references/api-doc-authoring-playbook.md](api-doc-authoring-playbook.md)（API 文档中的时序图/架构图选区）
 - 配套确定性资产：
-  - `scripts/check_code_blocks.py` — 强制校验代码块标注 `mermaid`/`puml` 语言（第 5/6/11 节）
-  - `assets/readme-template.md` — README 标准模板（图只放架构类，避免堆截图，第 10 节坑）
+  - [scripts/check_code_blocks.py](../scripts/check_code_blocks.py) — 强制校验代码块标注 `mermaid`/`puml` 语言（第 5/6/11 节）
+  - [assets/readme-template.md](../assets/readme-template.md) — README 标准模板（图只放架构类，避免堆截图，第 10 节坑）

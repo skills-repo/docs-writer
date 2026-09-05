@@ -191,14 +191,14 @@ npx redoc-cli serve openapi.yaml
 
 ## 相关子技能与层次边界
 
-本文补 `skills/api-doc-generator/` **装不下**的判断层：`api-doc-generator` 负责「从代码提取端点生成 OpenAPI」，本文负责「生成的 spec 怎么写才算好文档、REST vs GraphQL 策略、版本演进不破坏调用方、示例质量怎么保证」。
+本文补 [skills/api-doc-generator/](../skills/api-doc-generator/SKILL.md) **装不下**的判断层：`api-doc-generator` 负责「从代码提取端点生成 OpenAPI」，本文负责「生成的 spec 怎么写才算好文档、REST vs GraphQL 策略、版本演进不破坏调用方、示例质量怎么保证」。
 
-- 直接服务子技能：`skills/api-doc-generator/`
+- 直接服务子技能：[skills/api-doc-generator/](../skills/api-doc-generator/SKILL.md)
 - 兄弟参考：
-  - `references/doc-lifecycle-and-pipeline.md`（API 文档在生成顺序中的位置与一致性）
-  - `references/diagram-selection-guide.md`（API 文档里的架构图/时序图选区）
+  - [references/doc-lifecycle-and-pipeline.md](doc-lifecycle-and-pipeline.md)（API 文档在生成顺序中的位置与一致性）
+  - [references/diagram-selection-guide.md](diagram-selection-guide.md)（API 文档里的架构图/时序图选区）
 - 配套确定性资产：
-  - `scripts/check_md_links.py` — 文档内链接存活核查（第 6/10 节，仅覆盖 `.md` 载体）
-  - `scripts/check_code_blocks.py` — 代码块语言标注核查（第 6/10 节）
-  - `assets/markdown-lint-rules.json` — 脚本规则源
+  - [scripts/check_md_links.py](../scripts/check_md_links.py) — 文档内链接存活核查（第 6/10 节，仅覆盖 `.md` 载体）
+  - [scripts/check_code_blocks.py](../scripts/check_code_blocks.py) — 代码块语言标注核查（第 6/10 节）
+  - [assets/markdown-lint-rules.json](../assets/markdown-lint-rules.json) — 脚本规则源
 - 边界提示：纯 YAML spec（`.yaml`）结构校验请用 spectral 等专用工具，本仓库脚本只覆盖 Markdown 载体（如 `docs/api.md` 内示例），二者职责互补。

@@ -59,7 +59,7 @@ metadata:
 
 ## 相关参考（Playbook）
 
-- `references/api-doc-authoring-playbook.md` — 核心 playbook：REST/GraphQL 文档策略、质量矩阵、版本演进不破坏调用方、示例质量
-- `references/doc-lifecycle-and-pipeline.md` — API 文档在生成顺序第 3 步、与实现一致性（CI 重生成防漂移）
-- 产出后核查：`scripts/check_md_links.py`、`scripts/check_code_blocks.py`（第 6/10 节 CI 门禁）
-- 规则源：`assets/markdown-lint-rules.json`
+- [references/api-doc-authoring-playbook.md](../../references/api-doc-authoring-playbook.md) — 核心 playbook：REST/GraphQL 文档策略、质量矩阵、版本演进不破坏调用方、示例质量
+- [references/doc-lifecycle-and-pipeline.md](../../references/doc-lifecycle-and-pipeline.md) — API 文档在生成顺序第 3 步、与实现一致性（CI 重生成防漂移）
+- 产出后核查：[scripts/check_md_links.py](../../scripts/check_md_links.py)、[scripts/check_code_blocks.py](../../scripts/check_code_blocks.py)（第 6/10 节 CI 门禁）
+- 规则源：[assets/markdown-lint-rules.json](../../assets/markdown-lint-rules.json)

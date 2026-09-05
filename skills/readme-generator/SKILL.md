@@ -61,7 +61,7 @@ metadata:
 
 ## 相关参考（Playbook）
 
-- `references/doc-lifecycle-and-pipeline.md` — 文档入口与生成顺序（第 1 步）、受众分层主文档写法
-- `references/diagram-selection-guide.md` — 第 15 节：本技能产出的架构图占位如何按真实技术栈补全
-- 产出后核查：`scripts/check_code_blocks.py`、`scripts/check_md_links.py`（文档门禁，防死链/未标注）
-- 模板范本：`assets/readme-template.md`
+- [references/doc-lifecycle-and-pipeline.md](../../references/doc-lifecycle-and-pipeline.md) — 文档入口与生成顺序（第 1 步）、受众分层主文档写法
+- [references/diagram-selection-guide.md](../../references/diagram-selection-guide.md) — 第 15 节：本技能产出的架构图占位如何按真实技术栈补全
+- 产出后核查：[scripts/check_code_blocks.py](../../scripts/check_code_blocks.py)、[scripts/check_md_links.py](../../scripts/check_md_links.py)（文档门禁，防死链/未标注）
+- 模板范本：[assets/readme-template.md](../../assets/readme-template.md)
