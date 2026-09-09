@@ -1,7 +1,7 @@
 # 项目文档标准模板
 
-> 本文件是 docs-writer 仓库的 README 规范模板，被 `scripts/check_md_links.py` 与
-> `scripts/check_code_blocks.py` 自检为 **0 错误**。新项目可直接复制此结构。
+> 本文件是 docs-writer 仓库的 README 规范模板，被 [scripts/check_md_links.py](../scripts/check_md_links.py) 与
+> [scripts/check_code_blocks.py](../scripts/check_code_blocks.py) 自检为 **0 错误**。新项目可直接复制此结构。
 
 ## 安装
 

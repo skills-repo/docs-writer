@@ -62,7 +62,7 @@
 - [ ] 架构图里的模块名与代码目录名一致
 - [ ] Changelog 的版本号与 git tag / README  badges 一致
 - [ ] API 文档的鉴权方式与 README「认证」段一致
-- [ ] 所有文档链接存活（用 `scripts/check_md_links.py` 自动核查）
+- [ ] 所有文档链接存活（用 [scripts/check_md_links.py](../scripts/check_md_links.py) 自动核查）
 
 ```bash
 # 提交前批量核查仓库内所有 .md 的死链与残留待办标记
@@ -129,7 +129,7 @@ jobs:
       - run: python3 scripts/check_code_blocks.py README.md docs/
 ```
 
-规则文件 `assets/markdown-lint-rules.json` 是脚本的唯一事实来源，团队调整「允许协议/必检 token」只改它一处。
+规则文件 [assets/markdown-lint-rules.json](../assets/markdown-lint-rules.json) 是脚本的唯一事实来源，团队调整「允许协议/必检 token」只改它一处。
 
 ## 10. 典型坑与规避（续）
 

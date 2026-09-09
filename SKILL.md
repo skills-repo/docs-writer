@@ -30,20 +30,20 @@ metadata:
 
 | 任务 | 读取 / 调用 | 关键词（grep 线索） |
 |------|------------|---------------------|
-| 文档生命周期、生成顺序、自动vs手写、跨文档一致性 | `references/doc-lifecycle-and-pipeline.md` | 文档流水线 生成顺序 一致性 自动生成 受众 |
-| API 文档撰写质量、REST/GraphQL 策略、版本演进 | `references/api-doc-authoring-playbook.md` | OpenAPI REST GraphQL 版本 示例 鉴权 |
-| 图表选型、PlantUML/Mermaid 决策、绘制与渲染坑 | `references/diagram-selection-guide.md` | 图表 PlantUML Mermaid 时序图 架构图 渲染 |
-| README/项目文档生成（细粒度调用） | `skills/readme-generator/SKILL.md` | readme generator 项目文档 ARCHITECTURE |
-| Changelog/Release Notes 生成（细粒度调用） | `skills/changelog-writer/SKILL.md` | changelog release notes Keep a Changelog |
-| API 文档生成（细粒度调用） | `skills/api-doc-generator/SKILL.md` | api doc OpenAPI swagger 端点 |
-| 图表架构设计（细粒度调用） | `skills/diagram-architect/SKILL.md` | diagram architect PlantUML Mermaid ER |
+| 文档生命周期、生成顺序、自动vs手写、跨文档一致性 | [references/doc-lifecycle-and-pipeline.md](references/doc-lifecycle-and-pipeline.md) | 文档流水线 生成顺序 一致性 自动生成 受众 |
+| API 文档撰写质量、REST/GraphQL 策略、版本演进 | [references/api-doc-authoring-playbook.md](references/api-doc-authoring-playbook.md) | OpenAPI REST GraphQL 版本 示例 鉴权 |
+| 图表选型、PlantUML/Mermaid 决策、绘制与渲染坑 | [references/diagram-selection-guide.md](references/diagram-selection-guide.md) | 图表 PlantUML Mermaid 时序图 架构图 渲染 |
+| README/项目文档生成（细粒度调用） | [skills/readme-generator/SKILL.md](skills/readme-generator/SKILL.md) | readme generator 项目文档 ARCHITECTURE |
+| Changelog/Release Notes 生成（细粒度调用） | [skills/changelog-writer/SKILL.md](skills/changelog-writer/SKILL.md) | changelog release notes Keep a Changelog |
+| API 文档生成（细粒度调用） | [skills/api-doc-generator/SKILL.md](skills/api-doc-generator/SKILL.md) | api doc OpenAPI swagger 端点 |
+| 图表架构设计（细粒度调用） | [skills/diagram-architect/SKILL.md](skills/diagram-architect/SKILL.md) | diagram architect PlantUML Mermaid ER |
 
 ## 内置脚本（确定性、可重复执行）
 
 放在 `scripts/`，纯标准库、零依赖、只读、不联网，规则来自 `assets/`：
 
-- `scripts/check_md_links.py` — 校验 Markdown 内部锚点链接与相对路径是否存活、残留 token
-- `scripts/check_code_blocks.py` — 校验 Markdown 围栏代码块是否标注语言、是否配平
+- [scripts/check_md_links.py](scripts/check_md_links.py) — 校验 Markdown 内部锚点链接与相对路径是否存活、残留 token
+- [scripts/check_code_blocks.py](scripts/check_code_blocks.py) — 校验 Markdown 围栏代码块是否标注语言、是否配平
 
 运行示例：
 
@@ -57,8 +57,8 @@ python3 scripts/check_code_blocks.py README.md docs/      # 查代码块标注
 
 `assets/` 提供可直接套用的规范与模板（被上述脚本读取执行、且自检 0 错误）：
 
-- `assets/markdown-lint-rules.json` — 链接/代码块检查规则（允许协议、必检 token）
-- `assets/readme-template.md` — README 标准模板（锚点/代码块均合规的范本）
+- [assets/markdown-lint-rules.json](assets/markdown-lint-rules.json) — 链接/代码块检查规则（允许协议、必检 token）
+- [assets/readme-template.md](assets/readme-template.md) — README 标准模板（锚点/代码块均合规的范本）
 
 ## 核心原则（始终遵循）
 

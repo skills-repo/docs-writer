@@ -70,7 +70,7 @@ sequenceDiagram
 ```
 ````
 
-> 注意代码块必须标语言（`mermaid`/`puml`），否则渲染器不认。本仓库 `scripts/check_code_blocks.py` 会强制校验所有代码块标注语言，未标的一律报错。
+> 注意代码块必须标语言（`mermaid`/`puml`），否则渲染器不认。本仓库 [scripts/check_code_blocks.py](../scripts/check_code_blocks.py) 会强制校验所有代码块标注语言，未标的一律报错。
 
 ## 6. 渲染坑与规避
 
